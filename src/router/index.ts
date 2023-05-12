@@ -78,6 +78,27 @@ export const constantRoutes: RouteRecordRaw[] = [
     ]
   },
   {
+    path: "/user",
+    component: Layout,
+    redirect: "/user/lis",
+    meta: {
+      title: "用户管理",
+      elIcon: "Grid"
+    },
+    children: [
+      {
+        path: "list",
+        component: () => import("@/views/user/list.vue"),
+        name: "UserList",
+        meta: {
+          title: "用户列表",
+          svgIcon: "dashboard",
+          keepAlive: true
+        }
+      }
+    ]
+  },
+  {
     path: "/package",
     component: Layout,
     redirect: "/package/list",
