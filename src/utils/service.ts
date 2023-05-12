@@ -19,7 +19,6 @@ function createService() {
     (response) => {
       // apiData 是 API 返回的数据
       const apiData = response.data as any
-      console.log("apiData: ", apiData)
       // 这个 Code 是和后端约定的业务 Code
       return Promise.resolve(apiData)
       // const code = apiData.code

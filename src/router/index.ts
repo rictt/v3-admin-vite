@@ -81,8 +81,10 @@ export const constantRoutes: RouteRecordRaw[] = [
     path: "/package",
     component: Layout,
     redirect: "/package/list",
+    name: "Package",
     meta: {
-      title: "Vip套餐"
+      title: "套餐管理",
+      elIcon: "Grid"
     },
     children: [
       {
@@ -90,9 +92,15 @@ export const constantRoutes: RouteRecordRaw[] = [
         component: () => import("@/views/package/list.vue"),
         name: "PackageList",
         meta: {
-          title: "套餐列表",
-          svgIcon: "menu",
-          keepAlive: true
+          title: "套餐列表"
+        }
+      },
+      {
+        path: "user-list",
+        component: () => import("@/views/package/user-list.vue"),
+        name: "PackageUserList",
+        meta: {
+          title: "用户订阅"
         }
       }
     ]

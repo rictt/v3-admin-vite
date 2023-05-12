@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { onMounted, reactive, ref, watch } from "vue"
-import { createVipPackageApi, deleteVipPackageApi, updateVipPackageApi, getVipPackageListApi } from "@/api/vip"
+import { createVipPackageApi, deleteVipPackageApi, updateVipPackageApi, getVipPackageListApi } from "@/api/package"
 import { getPermissionListApi } from "@/api/permission"
 import { type IGetTableData } from "@/api/table/types/table"
 import { type FormInstance, type FormRules, ElMessage, ElMessageBox } from "element-plus"
